@@ -1,0 +1,50 @@
+Documentação do Programa de Stream Archive (SAR)
+
+
+INTEGRANTES:
+Guilherme Nishi Kanashiro (RA: 628298)
+Tiago Bachiega de Almeida (RA: 628247)
+
+
+FUNCIONAMENTO:
+
+Importante: O programa foi feito para o Sistema Operacional Windows (Desenvolvido no Windows 8.1). Extraia o arquivo zip para utilizá-lo.
+
+O programa pode criar e mostrar na tela um arquivo contendo o conteúdo( arquivos, diretórios incluindo a hierarquia interna)
+de um diretório, e extrair o conteúdo do diretório a partir do arquivo. O nome do arquivo onde o diretório é salvo é "conteudo.sar".
+Quando o arquivo é extraido, o resultado fica na pasta "extracao", dentro do local onde está o .exe e o conteudo.sar.
+
+Para realizar a coleta/extração, execute o executável do trabalho e siga as seguintes instruções:
+
+-c diretório
+  Com a opção -c, especifica-se um diretório e o programa cria um arquivo
+  chamado nome.sar, contendo todos os arquivos e sub-diretórios contidos no diretório indicado.
+  ex: -c C:/Users/Usuario/Desktop/Pasta
+
+-e arquivo_sar
+  A opção -e indica a extração de arquivos e, neste caso, indica-se um arquivo
+  com extensão .sar. Toda a hierarquia de diretórios e arquivos contidos no arquivo
+  são extraídos.
+  ex: -e C:/Users/Usuario/Desktop/Pasta/conteudo.sar
+
+-l arquivo_sar
+  A opção de listagem, indicada por -l, usa um arquivo com extensão .sar e
+  apresenta na tela a lista de arquivos nele armazenados, incluindo a estrutura
+  de diretórios.
+  ex: -l C:/Users/Usuario/Desktop/Pasta/conteudo.sar
+
+sair
+Opção para finalizar o programa.
+
+
+ajuda
+Mostra as opções e funcionamento dos comandos listados acima.
+
+ORGANIZAÇÃO DE ARQUIVO E LÓGICA DE ARMAZENAMENTO: 
+O arquivo é organizado da seguinte forma: Tamanho do Campo + Keyword Identificadora + Conteúdo  (se for arquivo).
+
+Exemplo: 15DIR=C:/Trabalho11FIL=abc.txt12TXT=trabalho
+
+Durante a leitura/extração do arquivo, o programa reconhece o tamanho de cada campo. Com isso, ele analisa a
+Keyword identificadora (DIR para diretório, FIL para arquivo e TXT para o conteudo do arquivo) e cria o diretório/arquivo
+com o conteudo gravado em conteudo.sar.
