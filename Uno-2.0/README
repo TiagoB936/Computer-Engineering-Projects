@@ -1,1 +1,4 @@
 This project is a Uno game with more cards and rules, that we called Uno 2.0.
+
+To play, fist you need to go to the directory Uno_2.0_Data and extract the content of the compressed directory resources there.
+Then you can execeute de Uno_2.0.exe and the game will start.
